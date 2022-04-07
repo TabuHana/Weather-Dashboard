@@ -14,9 +14,11 @@
 
 <body>
 
-  <div class="container">
+  <div class="container default-bg">
     <div class="header">
-      <h1>Weather Dashboard</h1>
+      <div class="icon-container default-bg">
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+      </div>
     </div>
 
     <section class="content">
@@ -33,15 +35,20 @@
           <div class="title">Wind:</div>
           <div class="value">TBD</div>
         </div>
-        <div class="detail">
+        <div class="detail bordered2">
           <div class="title">Humidity:</div>
+          <div class="value">TBD</div>
+        </div>
+        <div class="detail">
+          <div class="title">UV:</div>
           <div class="value">TBD</div>
         </div>
       </div>
       <div class="city-search-container">
-        <input type="text" class="city-search" placeholder="Carlsbad">
+        <input id="cityName" type="text" class="city-search" placeholder="Carlsbad">
         <button type="button" class="btn" id="searchBtn">Search</button>
       </div>
+      <div class="history" id="searchHistory"></div>
     </section>
   </div>
 
