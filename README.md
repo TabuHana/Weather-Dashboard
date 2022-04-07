@@ -5,7 +5,7 @@
   ***
   ## Table of Contents
   - [Description](#description)
-  - [Visual Presentation}(#visual-presentation)
+  - [Visual Presentation](#visual-presentation)
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
   - [Usuage](#usuage)
