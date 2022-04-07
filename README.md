@@ -43,5 +43,6 @@
 
   ***
   ## Additional Info
+  - Deployed App: https://tabuhana.github.io/Weather-Dashboard/
   - Github: TabuHana(https://github.com/TabuHana)
   - Email: nate31196@outlook.com
