@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
- 
-  
+
   <script defer src="./script.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
-  <title>Weather Dashboard</title>
+  <title>Weather App</title>
 </head>
+
 <body>
-  <main class="container">
+
+  <div id="mainContainer" class="container default-bg">
     <div class="header">
-      <h1>Weather Dashboard</h1>
-    </div>
-
-    <div class="row">
-      <div class="input-field col">
-      <input value="Carlsbad" id="cityName" class="validate" type="text">
-      <label class="active" for="cityName">City Name</label>
-      </div>
-      <button class="btn" id="searchBtn" >Search</button>
-    </div>
-    <div class="row">
-      Search History:
-      <div class="history" id="searchHistory" >
+      <div id="iconContainer" class="icon-container default-bg">
+        <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather-icon">
       </div>
     </div>
-    <div class="row">
-      <div id="currentDiv">currentDiv</div>
-    </div>
-    <div class="row">
-      <div id="fiveDay">fiveDay</div>
-    </div>
 
-  </main>
+    <section class="content">
+      <div class="general-info">
+        <div id="citySelected" class="status">Search for a City</div>
+        <div id="location" class="location">to find the Weather</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail">
+          <div class="title">Tempurate:</div>
+          <div id="tempValue" class="value">TBD</div>
+        </div>
+        <div class="detail bordered">
+          <div class="title">Wind:</div>
+          <div id="windValue" class="value">TBD</div>
+        </div>
+        <div class="detail bordered2">
+          <div class="title">Humidity:</div>
+          <div id="humidityValue" class="value">TBD</div>
+        </div>
+        <div class="detail">
+          <div class="title">UVI:</div>
+          <div id="uviValue" class="value">TBD</div>
+        </div>
+      </div>
+      <div class="city-search-container">
+        <input id="cityName" type="text" class="city-search" placeholder="Carlsbad">
+        <button type="button" class="btn" id="searchBtn">Search</button>
+      </div>
+      <div class="history" id="searchHistory"></div>
+    </section>
+  </div>
+
+  <div id="flex-container" class="flex-container">
+    <!-- <div class="grid-item">
+      <div class="title">Date:</div>
+      <div id="img5Icon"></div>
+      <div class="title">Tempurature</div>
+      <div class="value5"></div>
+      <div class="title">Humidity</div>
+      <div class="value5"></div>
+    </div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div> -->
+  </div>
+
 </body>
+
 </html>

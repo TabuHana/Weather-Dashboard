@@ -1,3 +1,37 @@
-# Weather-Dashboard
-``
-Weather app
+# Weather Dashboard
+
+  ![license](https://img.shields.io/badge/license-MIT-blue)
+
+  ***
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usuage](#usuage)
+  - [Contribution](#contribution)
+  - [Testing](#testing)
+  - [Additional Info](#additional-info)
+
+  ***
+  ## Description
+  A Simple 5day forecast Weather Dashboard that allows you to search by city name
+
+  ***
+  ## Installation
+  N/A
+
+  ***
+  ## Usuage
+  Searching the weather by city
+
+  ***
+  ## Contribution
+  Any can contribute
+
+  ***
+  ## Testing
+  N/a
+
+  ***
+  ## Additional Info
+  - Github: TabuHana(https://github.com/TabuHana)
+  - Email: nate31196@outlook.com
