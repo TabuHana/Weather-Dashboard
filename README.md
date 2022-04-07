@@ -8,7 +8,7 @@
   - [Visual Presentation](#visual-presentation)
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
-  - [Usuage](#usuage)
+  - [Usage](#usage)
   - [Contribution](#contribution)
   - [Testing](#testing)
   - [Additional Info](#additional-info)
@@ -30,12 +30,12 @@
   N/A
 
   ***
-  ## Usuage
+  ## Usage
   Searching the weather by city
 
   ***
   ## Contribution
-  Any can contribute
+  N/A
 
   ***
   ## Testing
@@ -43,5 +43,6 @@
 
   ***
   ## Additional Info
+  - Deployed App: https://tabuhana.github.io/Weather-Dashboard/
   - Github: TabuHana(https://github.com/TabuHana)
   - Email: nate31196@outlook.com
