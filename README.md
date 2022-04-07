@@ -5,6 +5,8 @@
   ***
   ## Table of Contents
   - [Description](#description)
+  - [Visual Presentation}(#visual-presentation)
+  - [Technologies Used](#technologies-used)
   - [Installation](#installation)
   - [Usuage](#usuage)
   - [Contribution](#contribution)
@@ -14,6 +16,14 @@
   ***
   ## Description
   A Simple 5day forecast Weather Dashboard that allows you to search by city name
+  
+  ***
+  ## Technologies Used
+  Axios.
+
+  ***
+  ## Visual Presentation
+  ![VisualPresentation](images/readmeVisualPresentation.gif)
 
   ***
   ## Installation
@@ -29,7 +39,7 @@
 
   ***
   ## Testing
-  N/a
+  N/A
 
   ***
   ## Additional Info
