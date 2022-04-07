@@ -109,7 +109,7 @@ document.addEventListener('click', () => {
                 <div class="title">${day.date}</div>
                 <img src="http://openweathermap.org/img/wn/${day.icon}.png" alt="weather-icon">
                 <div class="title">Tempurature</div>
-                <div class="value5">${day.temp}</div>
+                <div class="value5">${day.temp} °F</div>
                 <div class="title">Humidity</div>
                 <div class="value5">${day.humidity}</div>
                 </div>
@@ -218,7 +218,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
                 <div class="title">${day.date}</div>
                 <img src="http://openweathermap.org/img/wn/${day.icon}.png" alt="weather-icon">
                 <div class="title">Tempurature</div>
-                <div class="value5">${day.temp}</div>
+                <div class="value5">${day.temp} °F</div>
                 <div class="title">Humidity</div>
                 <div class="value5">${day.humidity}</div>
                 </div>
