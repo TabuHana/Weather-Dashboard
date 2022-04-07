@@ -1,5 +1,12 @@
 const APIKEY = '97fb53647d7394c4b972bd222a35611d'
 
+const citySelected = document.getElementById('citySelected')
+const tempValue = document.getElementById('tempValue')
+const windValue = document.getElementById('windValue')
+const humidityValue = document.getElementById('humidityValue')
+const uviValue = document.getElementById('uviValue')
+
+
 let UserCities = JSON.parse(localStorage.getItem('storedCities')) || []
 
 UserCities.forEach(city => {
@@ -30,6 +37,16 @@ document.addEventListener('click', () => {
             } else {
               uviColor = 'red'
             }
+
+            let currentTemp = res.data.list[0].main.temp
+            let currentWindSpeed = res.data.list[0].wind.speed
+            let currentHumidity = res.data.list[0].main.humidity
+            let currentUVI = resp.data.current.uvi
+
+            tempValue.innerHTML = currentTemp + '°F'
+            windValue.innerHTML = currentWindSpeed + ' mph'
+            humidityValue = currentHumidity
+            uviValue = currentUVI
 
             document.getElementById('currentDiv').innerHTML = `
       <p>City Name = ${res.data.city.name}</p>
