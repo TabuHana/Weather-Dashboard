@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  flex-direction: column;
 }
 
 .container {
@@ -108,4 +109,24 @@ body {
   border-radius: 5px;
   font-size: 25px;
   letter-spacing: 3px;
+}
+
+.flex-container {
+  display: flex;
+  margin: 30px;
+  gap:20px;
+  height: 200px;
+  width: 1200px;
+}
+
+.grid-item {
+  display: flex;
+  background-color: aqua;
+  border: 3px solid black;
+  padding: 20px;
+  max-width: 90%;
+  width: 1200px;
+  background-color: white;
+  border-radius: 5px;
+
 }
