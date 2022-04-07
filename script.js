@@ -31,32 +31,38 @@ document.addEventListener('click', () => {
 
             let uviColor
             if (resp.data.current.uvi < 2) {
-              uviColor = 'green'
+              document.getElementById('mainContainer').classList.remove('default-bg')
+              document.getElementById('iconContainer').classList.remove('default-bg')
+              document.getElementById('mainContainer').classList.add('green')
+              document.getElementById('iconContainer').classList.add('green')
+
             } else if (resp.data.current.uvi < 5) {
-              uviColor = 'yellow'
+              document.getElementById('mainContainer').classList.remove('default-bg')
+              document.getElementById('iconContainer').classList.remove('default-bg')
+              document.getElementById('mainContainer').classList.add('yellow')
+              document.getElementById('iconContainer').classList.add('green')
+
             } else {
-              uviColor = 'red'
+              document.getElementById('mainContainer').classList.remove('default-bg')
+              document.getElementById('iconContainer').classList.remove('default-bg')
+              document.getElementById('mainContainer').classList.add('red')
+              document.getElementById('iconContainer').classList.add('green')
+
             }
 
             let currentTemp = res.data.list[0].main.temp
             let currentWindSpeed = res.data.list[0].wind.speed
             let currentHumidity = res.data.list[0].main.humidity
             let currentUVI = resp.data.current.uvi
+            let currentDate = res.data.list[0].dt_txt
 
+            citySelected.innerHTML = cityName
+            document.getElementById('location').innerHTML = currentDate
+            document.getElementById('iconContainer').innerHTML = `<img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@2x.png" alt="weather-icon">`
             tempValue.innerHTML = currentTemp + '°F'
             windValue.innerHTML = currentWindSpeed + ' mph'
-            humidityValue = currentHumidity
-            uviValue = currentUVI
-
-            document.getElementById('currentDiv').innerHTML = `
-      <p>City Name = ${res.data.city.name}</p>
-      <p>Date = ${res.data.list[0].dt_txt}</p>
-      <img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@4x.png">
-      <p>Temperature = ${res.data.list[0].main.temp} °F</p>
-      <p>Humidity = ${res.data.list[0].main.humidity}</p>
-      <p>Wind Speed = ${res.data.list[0].wind.speed} mph</p>
-      <p class='${uviColor}'>UV = ${resp.data.current.uvi}</p>
-      `
+            humidityValue.innerHTML = currentHumidity
+            uviValue.innerHTML = currentUVI
 
             let weatherArry = []
             let day1 = {
@@ -98,13 +104,16 @@ document.addEventListener('click', () => {
             console.log(weatherArry)
 
             weatherArry.forEach(day => {
-              document.getElementById('fiveDay').innerHTML += `
-        <hr>
-        <p>Date = ${day.date}</p>
-        <img src="http://openweathermap.org/img/wn/${day.icon}@4x.png">
-        <p>Temperature = ${day.temp} °F</p>
-        <p>Humidity = ${day.humidity}</p>
-        `
+              document.getElementById('flex-container').innerHTML += `
+              <div class="grid-item">
+                <div class="title">${day.date}</div>
+                <img src="http://openweathermap.org/img/wn/${day.icon}.png" alt="weather-icon">
+                <div class="title">Tempurature</div>
+                <div class="value5">${day.temp}</div>
+                <div class="title">Humidity</div>
+                <div class="value5">${day.humidity}</div>
+                </div>
+              `
             })
           })
       })
@@ -131,22 +140,38 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 
           let uviColor
           if (resp.data.current.uvi < 2) {
-            uviColor = 'green'
+            document.getElementById('mainContainer').classList.remove('default-bg')
+            document.getElementById('iconContainer').classList.remove('default-bg')
+            document.getElementById('mainContainer').classList.add('green')
+            document.getElementById('iconContainer').classList.add('green')
+
           } else if (resp.data.current.uvi < 5) {
-            uviColor = 'yellow'
+            document.getElementById('mainContainer').classList.remove('default-bg')
+            document.getElementById('iconContainer').classList.remove('default-bg')
+            document.getElementById('mainContainer').classList.add('yellow')
+            document.getElementById('iconContainer').classList.add('green')
+
           } else {
-            uviColor = 'red'
+            document.getElementById('mainContainer').classList.remove('default-bg')
+            document.getElementById('iconContainer').classList.remove('default-bg')
+            document.getElementById('mainContainer').classList.add('red')
+            document.getElementById('iconContainer').classList.add('green')
+
           }
 
-          document.getElementById('currentDiv').innerHTML = `
-      <p>City Name = ${res.data.city.name}</p>
-      <p>Date = ${res.data.list[0].dt_txt}</p>
-      <img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@4x.png">
-      <p>Temperature = ${res.data.list[0].main.temp} °F</p>
-      <p>Humidity = ${res.data.list[0].main.humidity}</p>
-      <p>Wind Speed = ${res.data.list[0].wind.speed} mph</p>
-      <p class='${uviColor}'>UV = ${resp.data.current.uvi}</p>
-      `
+          let currentTemp = res.data.list[0].main.temp
+          let currentWindSpeed = res.data.list[0].wind.speed
+          let currentHumidity = res.data.list[0].main.humidity
+          let currentUVI = resp.data.current.uvi
+          let currentDate = res.data.list[0].dt_txt
+
+          citySelected.innerHTML = cityName
+          document.getElementById('location').innerHTML = currentDate
+          document.getElementById('iconContainer').innerHTML = `<img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@2x.png" alt="weather-icon">`
+          tempValue.innerHTML = currentTemp + '°F'
+          windValue.innerHTML = currentWindSpeed + ' mph'
+          humidityValue.innerHTML = currentHumidity
+          uviValue.innerHTML = currentUVI
 
           let weatherArry = []
           let day1 = {
@@ -188,13 +213,16 @@ document.getElementById('searchBtn').addEventListener('click', () => {
           console.log(weatherArry)
 
           weatherArry.forEach(day => {
-            document.getElementById('fiveDay').innerHTML += `
-        <hr>
-        <p>Date = ${day.date}</p>
-        <img src="http://openweathermap.org/img/wn/${day.icon}@4x.png">
-        <p>Temperature = ${day.temp} °F</p>
-        <p>Humidity = ${day.humidity}</p>
-        `
+            document.getElementById('flex-container').innerHTML += `
+              <div class="grid-item">
+                <div class="title">${day.date}</div>
+                <img src="http://openweathermap.org/img/wn/${day.icon}.png" alt="weather-icon">
+                <div class="title">Tempurature</div>
+                <div class="value5">${day.temp}</div>
+                <div class="title">Humidity</div>
+                <div class="value5">${day.humidity}</div>
+                </div>
+              `
           })
         })
     })

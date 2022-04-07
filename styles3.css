@@ -137,9 +137,10 @@ body {
 
 .grid-item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bolder;
   background: linear-gradient(to right, rgb(172, 126, 245), rgb(49, 26, 252));
   color: black;
