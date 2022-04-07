@@ -35,7 +35,7 @@
 
   ***
   ## Contribution
-  Any can contribute
+  N/A
 
   ***
   ## Testing
