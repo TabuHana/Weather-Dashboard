@@ -8,7 +8,7 @@
   - [Visual Presentation](#visual-presentation)
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
-  - [Usuage](#usuage)
+  - [Usage](#usage)
   - [Contribution](#contribution)
   - [Testing](#testing)
   - [Additional Info](#additional-info)
@@ -30,7 +30,7 @@
   N/A
 
   ***
-  ## Usuage
+  ## Usage
   Searching the weather by city
 
   ***
