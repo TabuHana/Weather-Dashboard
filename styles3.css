@@ -154,15 +154,15 @@ body {
 }
 
 .green {
-
+  background-color: rgb(110, 248, 202);
 }
 
 .yellow {
-
+  background-color: rgb(221, 248, 147);
 }
 
 .red {
-
+  background-color: rgb(247, 142, 128);
 }
 
 .hidden {
